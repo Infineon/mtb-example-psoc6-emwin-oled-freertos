@@ -3,22 +3,23 @@
 * File Name: oledTask.c
 *
 *******************************************************************************
-* (c) 2019-2020, Cypress Semiconductor Corporation. All rights reserved.
-*******************************************************************************
-* This software, including source code, documentation and related materials
-* ("Software"), is owned by Cypress Semiconductor Corporation or one of its
-* subsidiaries ("Cypress") and is protected by and subject to worldwide patent
-* protection (United States and foreign), United States copyright laws and
-* international treaty provisions. Therefore, you may use this Software only
-* as provided in the license agreement accompanying the software package from
-* which you obtained this Software ("EULA").
+* Copyright 2021-2022, Cypress Semiconductor Corporation (an Infineon company) or
+* an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
+* This software, including source code, documentation and related
+* materials ("Software") is owned by Cypress Semiconductor Corporation
+* or one of its affiliates ("Cypress") and is protected by and subject to
+* worldwide patent protection (United States and foreign),
+* United States copyright laws and international treaty provisions.
+* Therefore, you may use this Software only as provided in the license
+* agreement accompanying the software package from which you
+* obtained this Software ("EULA").
 * If no EULA applies, Cypress hereby grants you a personal, non-exclusive,
-* non-transferable license to copy, modify, and compile the Software source
-* code solely for use in connection with Cypress's integrated circuit products.
-* Any reproduction, modification, translation, compilation, or representation
-* of this Software except as specified above is prohibited without the express
-* written permission of Cypress.
+* non-transferable license to copy, modify, and compile the Software
+* source code solely for use in connection with Cypress's
+* integrated circuit products.  Any reproduction, modification, translation,
+* compilation, or representation of this Software except as specified
+* above is prohibited without the express written permission of Cypress.
 *
 * Disclaimer: THIS SOFTWARE IS PROVIDED AS-IS, WITH NO WARRANTY OF ANY KIND,
 * EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT, IMPLIED
@@ -29,9 +30,9 @@
 * not authorize its products for use in any products where a malfunction or
 * failure of the Cypress product may reasonably be expected to result in
 * significant property damage, injury or death ("High Risk Product"). By
-* including Cypress's product in a High Risk Product, the manufacturer of such
-* system or application assumes all risk of such use and in doing so agrees to
-* indemnify Cypress against all liability.
+* including Cypress's product in a High Risk Product, the manufacturer
+* of such system or application assumes all risk of such use and in doing
+* so agrees to indemnify Cypress against all liability.
 *******************************************************************************/
 /******************************************************************************
 * This file contains the task that demonstrates
@@ -55,7 +56,6 @@
 #include "GUI.h"
 #include "mtb_ssd1306.h"
 #include "mtb_ssd1306_i2c.h"
-#include "cy8ckit_032.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "images.h"
@@ -526,8 +526,8 @@ void oledTask(void *arg)
     };
 
     /* Initialize and configure the I2C to use with the OLED display */
-    result = cyhal_i2c_init( &i2c_obj, CY8CKIT_032_PIN_I2C_SDA,
-                             CY8CKIT_032_PIN_I2C_SCL, NULL);
+    result = cyhal_i2c_init( &i2c_obj, CYBSP_I2C_SDA,
+            CYBSP_I2C_SCL, NULL);
     CY_ASSERT(result == CY_RSLT_SUCCESS);
 
     result = cyhal_i2c_configure(&i2c_obj, &i2c_config);
@@ -567,3 +567,4 @@ void oledTask(void *arg)
         pageNumber = (pageNumber + 1) % NUMBER_OF_DEMO_PAGES;
     }
 }
+/* END OF FILE */
