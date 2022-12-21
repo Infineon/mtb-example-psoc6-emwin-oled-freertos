@@ -37,6 +37,10 @@
 #ifndef OLEDTASK_H_
 #define OLEDTASK_H_
 
+void WaitforSwitchPressAndRelease(void);
+
 void oledTask(void *arg);
 
+
 #endif /* OLEDTASK_H_ */
+

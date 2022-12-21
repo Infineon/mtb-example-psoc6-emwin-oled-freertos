@@ -97,10 +97,10 @@ SOURCES=
 
 # Like SOURCES, but for include directories. Value should be paths to
 # directories (without a leading -I).
-INCLUDES=
+INCLUDES+= ./AppWizardProj01/Source/CustomCode ./AppWizardProj01/Source/Generated
 
 # Add additional defines to the build process (without a leading -D).
-DEFINES=
+DEFINES+=GUI_OVERHEAD_NUMBYTES=16384
 
 # Select softfp or hardfp floating point. Default is softfp.
 VFP_SELECT=
