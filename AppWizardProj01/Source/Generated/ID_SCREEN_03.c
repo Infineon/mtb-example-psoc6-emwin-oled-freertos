@@ -3,7 +3,7 @@
 *        Solutions for real time microcontroller applications        *
 **********************************************************************
 *                                                                    *
-*        (c) 1996 - 2022  SEGGER Microcontroller GmbH                *
+*        (c) 1996 - 2023  SEGGER Microcontroller GmbH                *
 *                                                                    *
 *        Internet: www.segger.com    Support:  support@segger.com    *
 *                                                                    *
@@ -100,7 +100,7 @@ static APPW_CREATE_ITEM _aCreate[] = {
 *
 *       _aSetup
 */
-static const APPW_SETUP_ITEM _aSetup[] = {
+static GUI_CONST_STORAGE APPW_SETUP_ITEM _aSetup[] = {
   { ID_BOX_00,    APPW_SET_PROP_COLOR,        { ARG_V(GUI_DARKGRAY) } },
   { ID_BOX_00,    APPW_SET_PROP_RADIUS,       { ARG_V(0) } },
   { ID_TEXT_04,   APPW_SET_PROP_COLOR,        { ARG_V(0xffc0c0c0) } },
@@ -131,7 +131,7 @@ static const APPW_SETUP_ITEM _aSetup[] = {
 *
 *       _aAction
 */
-static const APPW_ACTION_ITEM _aAction[] = {
+static GUI_CONST_STORAGE APPW_ACTION_ITEM _aAction[] = {
   { ID_SCREEN_03, APPW_NOTIFICATION_INITDIALOG,     ID_TIMER_00,  APPW_JOB_START,          ID_SCREEN_03__APPW_NOTIFICATION_INITDIALOG,
   },
   { ID_TIMER_00,  APPW_NOTIFICATION_TIMER,          0,            APPW_JOB_SHOWSCREEN,     ID_SCREEN_03__ID_TIMER_00__APPW_NOTIFICATION_TIMER,

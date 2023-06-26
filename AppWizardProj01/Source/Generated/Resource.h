@@ -3,7 +3,7 @@
 *        Solutions for real time microcontroller applications        *
 **********************************************************************
 *                                                                    *
-*        (c) 1996 - 2022  SEGGER Microcontroller GmbH                *
+*        (c) 1996 - 2023  SEGGER Microcontroller GmbH                *
 *                                                                    *
 *        Internet: www.segger.com    Support:  support@segger.com    *
 *                                                                    *
@@ -58,27 +58,27 @@ Purpose     : Generated file do NOT edit!
 #define ID_RTEXT_5 32
 
 #define APPW_MANAGE_TEXT APPW_MANAGE_TEXT_EXT
-extern const unsigned char acAPPW_Language_0[];
+extern GUI_CONST_STORAGE unsigned char acAPPW_Language_0[];
 
 /*********************************************************************
 *
 *       Fonts
 */
-extern const unsigned char acRoboto_16_Normal_EXT_AA4[];
-extern const unsigned char acArial_14_Normal_EXT_AA4[];
-extern const unsigned char acArial_15_Normal_EXT[];
-extern const unsigned char acArial_12_Normal_EXT[];
-extern const unsigned char acArial_14_Normal_EXT[];
-extern const unsigned char acArial_17_Normal_EXT[];
-extern const unsigned char acArial_12_Bold_EXT[];
-extern const unsigned char acArial_14_Bold_EXT[];
-extern const unsigned char acArial_17_Bold_EXT[];
+extern GUI_CONST_STORAGE unsigned char acRoboto_16_Normal_EXT_AA4[];
+extern GUI_CONST_STORAGE unsigned char acArial_14_Normal_EXT_AA4[];
+extern GUI_CONST_STORAGE unsigned char acArial_15_Normal_EXT[];
+extern GUI_CONST_STORAGE unsigned char acArial_12_Normal_EXT[];
+extern GUI_CONST_STORAGE unsigned char acArial_14_Normal_EXT[];
+extern GUI_CONST_STORAGE unsigned char acArial_17_Normal_EXT[];
+extern GUI_CONST_STORAGE unsigned char acArial_12_Bold_EXT[];
+extern GUI_CONST_STORAGE unsigned char acArial_14_Bold_EXT[];
+extern GUI_CONST_STORAGE unsigned char acArial_17_Bold_EXT[];
 
 /*********************************************************************
 *
 *       Images
 */
-extern const unsigned char acIFIN_Logo_Full_Size_BMP_HQ_INV[];
+extern GUI_CONST_STORAGE unsigned char acIFIN_Logo_Full_Size_BMP_HQ_INV[];
 
 /*********************************************************************
 *

@@ -25,7 +25,7 @@
  *
  * https://www.FreeRTOS.org
  * https://github.com/FreeRTOS
- * http://www.cypress.com
+ * http://www.infineon.com
  *
  */
 
@@ -212,11 +212,13 @@ extern void vApplicationSleep( uint32_t xExpectedIdleTime );
 #else
 #define configUSE_TICKLESS_IDLE                 0
 #endif
+
 /* Deep Sleep Latency Configuration */
 #if defined (CY_DEVICE_SECURE) && defined (DEBUG)
 #undef CY_CFG_PWR_DEEPSLEEP_LATENCY
 #define CY_CFG_PWR_DEEPSLEEP_LATENCY            (100UL)
 #endif
+
 #if( CY_CFG_PWR_DEEPSLEEP_LATENCY > 0 )
 #define configEXPECTED_IDLE_TIME_BEFORE_SLEEP   CY_CFG_PWR_DEEPSLEEP_LATENCY
 #endif
@@ -234,5 +236,15 @@ extern void vApplicationSleep( uint32_t xExpectedIdleTime );
  * The compatible implementations are also provided by the clib-support library.
  */
 #define configUSE_NEWLIB_REENTRANT              1
+
+/* Deep Sleep Latency Configuration */
+#if defined (TARGET_CY8CKIT_064S0S2_4343W) && defined (DEBUG)
+#undef CY_CFG_PWR_DEEPSLEEP_LATENCY
+#define CY_CFG_PWR_DEEPSLEEP_LATENCY            (100UL)
+#endif
+
+#if( CY_CFG_PWR_DEEPSLEEP_LATENCY > 0 )
+#define configEXPECTED_IDLE_TIME_BEFORE_SLEEP   CY_CFG_PWR_DEEPSLEEP_LATENCY
+#endif
 
 #endif /* FREERTOS_CONFIG_H */

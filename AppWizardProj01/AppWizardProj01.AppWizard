@@ -3,18 +3,22 @@
   xSizeDisplay=128
   ySizeDisplay=64
   ColorConv=GUICC_1
-  LastSavedWith=1.30_6.26d
+  LastSavedWith=1.38_6.32d
   BSP=
   ManageTextExt=0
   ShowMissingCharacters=0
   EnableBiDi=0
   EnableThai=0
   EnableFocus=0
+  EnableScroller=0
   MultibufEnable=0
+  MinTimePerFrame=40
   <Bitmaps>
     Format=Infineon_logo_2048x1152.png,1
     Format=IFIN_Logo_Full_Size_BMP_HQ_INV.bmp,1
   </Bitmaps>
+  <Movies>
+  </Movies>
   <Fonts>
   </Fonts>
   <Text>
@@ -1622,7 +1626,7 @@
       IdPrev=0
       IdPost=0
       <Dispose>
-        xSize=63
+        xSize=74
         ySize=12
         <X0>
           Mode=2
@@ -1863,7 +1867,7 @@
       Slot=ID_SCREEN_04__APPW_NOTIFICATION_INITDIALOG
       Flags=0
     </START>
-    <SWAPSCREEN>
+    <SHOWSCREEN>
       RootId=6147
       IdSrc=ID_TIMER_00
       NCode=APPW_NOTIFICATION_TIMER
@@ -1872,7 +1876,7 @@
       <Para>
         RootId=6148
       </Para>
-    </SWAPSCREEN>
+    </SHOWSCREEN>
     <START>
       RootId=6148
       IdSrc=ID_SCREEN_05
